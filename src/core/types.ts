@@ -8,6 +8,8 @@ export interface Finding {
     recommendation: string;
 }
 
+export type Rule = (spec: any) => Finding[];
+
 export interface LintResult {
     score: number;
     findings: Finding[];
