@@ -1,3 +1,6 @@
+import { runRules } from "../../core/engine";
+
 export async function lintCommand(path: string) {
-    console.log(`Linting ${path}...`);
+    const findings = runRules();
+    console.log(findings);
 }
