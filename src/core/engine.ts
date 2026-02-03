@@ -1,13 +1,13 @@
 import { Finding } from "./types";
 
-export function runRules(): Finding[] {
-    return [
-        {
-            ruleId: "DEMO_RULE",
-            title: "Example finding",
-            severity: "high",
-            impact: "Agents cannot reliably use this API",
-            recommendation: "Add structured error responses"
-        }
+import { structuredErrors } from "../rules/openapi/structured-errors";
+import { missingDescriptions } from "../rules/openapi/missing-descriptions";
+
+export function runRules(spec: any): Finding[] {
+    const rules = [
+        structuredErrors,
+        missingDescriptions
     ];
+
+    return rules.flatMap(rule => rule(spec));
 }
