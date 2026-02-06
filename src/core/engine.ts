@@ -1,5 +1,4 @@
 import { Finding } from "./types";
-
 import { structuredErrors } from "../rules/openapi/structured-errors";
 import { missingDescriptions } from "../rules/openapi/missing-descriptions";
 import { calculateScore } from "./score";
