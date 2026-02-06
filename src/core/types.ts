@@ -11,6 +11,6 @@ export interface Finding {
 export type Rule = (spec: any) => Finding[];
 
 export interface LintResult {
-    score: number;
+    score: { score: number, riskLevel: "low" | "medium" | "high", exitCode: number };
     findings: Finding[];
 }
