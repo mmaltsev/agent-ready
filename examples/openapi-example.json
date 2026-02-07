@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Simple API overview",
+        "title": "Open API Example",
         "version": "2.0.0"
     },
     "paths": {
@@ -24,7 +24,7 @@
                                                     "id": "v2.0",
                                                     "links": [
                                                         {
-                                                            "href": "http://127.0.0.1:8774/v2/",
+                                                            "href": "http://127.0.0.1:8080/v2/",
                                                             "rel": "self"
                                                         }
                                                     ]
@@ -35,7 +35,7 @@
                                                     "id": "v3.0",
                                                     "links": [
                                                         {
-                                                            "href": "http://127.0.0.1:8774/v3/",
+                                                            "href": "http://127.0.0.1:8080/v3/",
                                                             "rel": "self"
                                                         }
                                                     ]
@@ -61,7 +61,7 @@
                                                     "id": "v2.0",
                                                     "links": [
                                                         {
-                                                            "href": "http://127.0.0.1:8774/v2/",
+                                                            "href": "http://127.0.0.1:8080/v2/",
                                                             "rel": "self"
                                                         }
                                                     ]
@@ -72,7 +72,7 @@
                                                     "id": "v3.0",
                                                     "links": [
                                                         {
-                                                            "href": "http://127.0.0.1:8774/v3/",
+                                                            "href": "http://127.0.0.1:8080/v3/",
                                                             "rel": "self"
                                                         }
                                                     ]
@@ -115,7 +115,7 @@
                                                 "id": "v2.0",
                                                 "links": [
                                                     {
-                                                        "href": "http://127.0.0.1:8774/v2/",
+                                                        "href": "http://127.0.0.1:8080/v2/",
                                                         "rel": "self"
                                                     },
                                                     {
@@ -164,7 +164,7 @@
                                                 "id": "v2.0",
                                                 "links": [
                                                     {
-                                                        "href": "http://23.253.228.211:8774/v2/",
+                                                        "href": "http://23.253.228.211:8080/v2/",
                                                         "rel": "self"
                                                     },
                                                     {
