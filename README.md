@@ -15,7 +15,7 @@
 11. Inconsistent Naming Across Endpoints
 12. Side Effects Not Declared in Documentation
 
-## Scoring refernce
+## Scoring reference
 
 | Score  | Risk level  | Meaning                 |
 | ------ | ----------- | ----------------------- |
