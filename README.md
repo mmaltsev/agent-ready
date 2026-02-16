@@ -2,7 +2,7 @@
 "AI-Readiness” Linter for APIs, SDKs, and CLIs.
 
 ## Rules
-1. Structured Error Responses Are Missing
+✅ Structured Error Responses Are Missing
 2. Error Responses Lack Error Codes
 3. Missing Response Schemas for Success
 4. No Rate-Limit Retry Guidance
