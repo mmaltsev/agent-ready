@@ -48,7 +48,7 @@ Reason: Agents may hallucinate meaning of properties without descriptions.
 Impact: Increases integration friction and ambiguity.
 
 ## 5. Error Responses Lack Error Codes
-ID: `OPENAPI_ERROR_NO_CODE_FIELD`
+ID: `error-no-code-field`
 
 Severity: High
 
@@ -59,7 +59,7 @@ Reason: Free-text error messages are not deterministic.
 Impact: Failures become ambiguous and harder to automate.
 
 ## 6. Missing Response Schemas for Success
-ID: `OPENAPI_MISSING_SUCCESS_SCHEMA`
+ID: `missing-success-schema`
 
 Severity: Medium
 
@@ -70,7 +70,7 @@ Reason: Agents cannot reliably parse outputs.
 Impact: Automation becomes brittle due to unclear output structure.
 
 ## 7. No Rate-Limit Retry Guidance
-ID: `OPENAPI_NO_RETRY_HINT`
+ID: `no-retry-hint`
 
 Severity: Medium
 
@@ -83,7 +83,7 @@ Reason: Agents need retry semantics to avoid cascading failure.
 Impact: Agents may retry aggressively or fail permanently.
 
 ## 8. Mutating Endpoints Without Idempotency Signals
-ID: `OPENAPI_NO_IDEMPOTENCY_HINT`
+ID: `no-idempotency-hint`
 
 Severity: High
 
@@ -96,7 +96,7 @@ Reason: Autonomous systems retry. Without idempotency, duplicates happen.
 Impact: Risk of duplicated side effects (billing, provisioning, emails).
 
 ## 9. No Examples for Requests or Responses
-ID: `OPENAPI_NO_EXAMPLES`
+ID: `no-examples`
 Severity: Medium
 
 Goal: Detect missing example or examples in request/response bodies.
@@ -106,7 +106,7 @@ Reason: Agents perform better when given canonical examples.
 Impact: Increases integration friction and ambiguity.
 
 ## 10. CLI Does Not Support Structured Output
-ID: `CLI_NO_STRUCTURED_OUTPUT`
+ID: `cli-no-structured-output`
 Severity: High
 
 Goal: Detect no --json, --output json, etc.
@@ -116,7 +116,7 @@ Reason: Free-text CLI output is fragile.
 Impact: CLI cannot be reliably used in automation loops.
 
 ## 11. Destructive Operations Not Explicitly Labeled
-ID: `OPENAPI_DESTRUCTIVE_NOT_FLAGGED`
+ID: `destructive-not-flagged`
 
 Severity: Medium
 
@@ -127,7 +127,7 @@ Reason: Agents need clear blast-radius awareness.
 Impact: Increased risk in autonomous workflows.
 
 ## 12. Ambiguous Enum Fields (Free-Text Instead of Enum)
-ID: `OPENAPI_STRING_INSTEAD_OF_ENUM`
+ID: `string-instead-of-enum`
 
 Severity: Medium
 
@@ -138,7 +138,7 @@ Reason: Agents perform worse with unconstrained strings.
 Impact: Increases variability and failure rates.
 
 ## 13. Missing Authentication Guidance for Non-Human Use
-ID: `DOCS_NO_SERVICE_ACCOUNT_GUIDANCE`
+ID: `docs-no-service-account-guidance`
 
 Severity: Medium
 
@@ -152,7 +152,7 @@ Reason: Agents are not humans.
 Impact: Increased friction for automation and platform adoption.
 
 ## 14. Inconsistent Naming Across Endpoints
-ID: `OPENAPI_INCONSISTENT_RESOURCE_NAMING`
+ID: `inconsistent-resource-naming`
 
 Severity: Medium
 
@@ -167,7 +167,7 @@ Reason: Agents depend on pattern recognition.
 Impact: Increases cognitive and integration complexity.
 
 ## 15. Side Effects Not Declared in Documentation
-ID: `OPENAPI_UNDECLARED_SIDE_EFFECTS`
+ID: `undeclared-side-effects`
 
 Severity: Medium
 
