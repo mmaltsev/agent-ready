@@ -4,6 +4,6 @@ import { parseOpenApi } from "../../inputs/openapi/parser";
 
 export async function lintCommand(path: string) {
     const spec = await parseOpenApi(path);
-    const findings = runRules(spec);
+    const { findings } = runRules(spec);
     printTextReport(findings);
 }
