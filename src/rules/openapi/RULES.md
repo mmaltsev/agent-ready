@@ -1,7 +1,7 @@
 # Agent-ready Rules
 
 ## 1. Structured Error Responses Are Missing
-ID: `OPENAPI_NO_STRUCTURED_ERRORS`
+ID: `structured-errors`
 
 Severity: High
 
@@ -14,7 +14,40 @@ Reason: Agents need machine-readable error codes to recover.
 
 Impact: Agents cannot recover autonomously from failures, increasing operational risk.
 
-## 2. Error Responses Lack Error Codes
+## 2. Missing Parameter Description
+ID: `missing-parameter-description`
+
+Severity: Medium
+
+Goal: Detect missing description or summary in operations, parameters, request body, and response schemas.
+
+Reason: Agents may not understand how to provide correctly formatted input.
+
+Impact: Increases integration friction and ambiguity.
+
+## 3. Missing Operation Description
+ID: `missing-operation-description`
+
+Severity: Medium
+
+Goal: Detect missing description or summary in operations, parameters, request body, and response schemas.
+
+Reason: Agents may not understand what this operation does.
+
+Impact: Increases integration friction and ambiguity.
+
+## 4. Missing Property Description
+ID: `missing-property-description`
+
+Severity: Low
+
+Goal: Detect missing description or summary in operations, parameters, request body, and response schemas.
+
+Reason: Agents may hallucinate meaning of properties without descriptions.
+
+Impact: Increases integration friction and ambiguity.
+
+## 5. Error Responses Lack Error Codes
 ID: `OPENAPI_ERROR_NO_CODE_FIELD`
 
 Severity: High
@@ -25,7 +58,7 @@ Reason: Free-text error messages are not deterministic.
 
 Impact: Failures become ambiguous and harder to automate.
 
-## 3. Missing Response Schemas for Success
+## 6. Missing Response Schemas for Success
 ID: `OPENAPI_MISSING_SUCCESS_SCHEMA`
 
 Severity: Medium
@@ -36,7 +69,7 @@ Reason: Agents cannot reliably parse outputs.
 
 Impact: Automation becomes brittle due to unclear output structure.
 
-## 4. No Rate-Limit Retry Guidance
+## 7. No Rate-Limit Retry Guidance
 ID: `OPENAPI_NO_RETRY_HINT`
 
 Severity: Medium
@@ -49,7 +82,7 @@ Reason: Agents need retry semantics to avoid cascading failure.
 
 Impact: Agents may retry aggressively or fail permanently.
 
-## 5. Mutating Endpoints Without Idempotency Signals
+## 8. Mutating Endpoints Without Idempotency Signals
 ID: `OPENAPI_NO_IDEMPOTENCY_HINT`
 
 Severity: High
@@ -62,7 +95,7 @@ Reason: Autonomous systems retry. Without idempotency, duplicates happen.
 
 Impact: Risk of duplicated side effects (billing, provisioning, emails).
 
-## 6. No Examples for Requests or Responses
+## 9. No Examples for Requests or Responses
 ID: `OPENAPI_NO_EXAMPLES`
 Severity: Medium
 
@@ -72,7 +105,7 @@ Reason: Agents perform better when given canonical examples.
 
 Impact: Increases integration friction and ambiguity.
 
-## 7. CLI Does Not Support Structured Output
+## 10. CLI Does Not Support Structured Output
 ID: `CLI_NO_STRUCTURED_OUTPUT`
 Severity: High
 
@@ -82,7 +115,7 @@ Reason: Free-text CLI output is fragile.
 
 Impact: CLI cannot be reliably used in automation loops.
 
-## 8. Destructive Operations Not Explicitly Labeled
+## 11. Destructive Operations Not Explicitly Labeled
 ID: `OPENAPI_DESTRUCTIVE_NOT_FLAGGED`
 
 Severity: Medium
@@ -93,7 +126,7 @@ Reason: Agents need clear blast-radius awareness.
 
 Impact: Increased risk in autonomous workflows.
 
-## 9. Ambiguous Enum Fields (Free-Text Instead of Enum)
+## 12. Ambiguous Enum Fields (Free-Text Instead of Enum)
 ID: `OPENAPI_STRING_INSTEAD_OF_ENUM`
 
 Severity: Medium
@@ -104,7 +137,7 @@ Reason: Agents perform worse with unconstrained strings.
 
 Impact: Increases variability and failure rates.
 
-## 10. Missing Authentication Guidance for Non-Human Use
+## 13. Missing Authentication Guidance for Non-Human Use
 ID: `DOCS_NO_SERVICE_ACCOUNT_GUIDANCE`
 
 Severity: Medium
@@ -118,7 +151,7 @@ Reason: Agents are not humans.
 
 Impact: Increased friction for automation and platform adoption.
 
-## 11. Inconsistent Naming Across Endpoints
+## 14. Inconsistent Naming Across Endpoints
 ID: `OPENAPI_INCONSISTENT_RESOURCE_NAMING`
 
 Severity: Medium
@@ -133,7 +166,7 @@ Reason: Agents depend on pattern recognition.
 
 Impact: Increases cognitive and integration complexity.
 
-## 12. Side Effects Not Declared in Documentation
+## 15. Side Effects Not Declared in Documentation
 ID: `OPENAPI_UNDECLARED_SIDE_EFFECTS`
 
 Severity: Medium
