@@ -4,6 +4,7 @@ import { missingDescriptions } from "../rules/openapi/missing-descriptions";
 import { errorNoCodeField } from "../rules/openapi/error-no-code-field";
 import { missingSuccessSchema } from "../rules/openapi/missing-success-schema";
 import { noRetryHint } from "../rules/openapi/no-retry-hint";
+import { noIdempotencyHint } from "../rules/openapi/no-idempotency-hint";
 import { calculateScore } from "./score";
 
 export function runRules(spec: any): { findings: Finding[], score: { score: number, riskLevel: "low" | "medium" | "high", exitCode: number } } {
@@ -12,7 +13,8 @@ export function runRules(spec: any): { findings: Finding[], score: { score: numb
         missingDescriptions,
         errorNoCodeField,
         missingSuccessSchema,
-        noRetryHint
+        noRetryHint,
+        noIdempotencyHint
     ];
 
     const allFindings = rules.flatMap(rule => rule(spec));

@@ -201,6 +201,15 @@
                         }
                     }
                 }
+            },
+            "post": {
+                "operationId": "createVersionDetailsv2",
+                "summary": "Create API version details",
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
             }
         }
     }
