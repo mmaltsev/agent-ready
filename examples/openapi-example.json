@@ -184,6 +184,21 @@
                                 }
                             }
                         }
+                    },
+                    "429": {
+                        "description": "Too Many Requests, no retry hint",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "error": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
