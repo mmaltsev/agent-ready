@@ -105,6 +105,8 @@ Reason: Agents perform better when given canonical examples.
 
 Impact: Increases integration friction and ambiguity.
 
+-------------- To be implemented later ------------------
+
 ## 10. CLI Does Not Support Structured Output
 ID: `cli-no-structured-output`
 Severity: High
